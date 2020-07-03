@@ -25,7 +25,7 @@ Register with one of the following accounts
 - Registration with SNS ID（credit card payment）*Available for free
   - You can register with your SNS account login. Facebook, Twitter and Google are available.
   - Register from [Here](https://console.mbaas.nifcloud.com/signup)
-  - *It is recommended for the access from outide of Japan (Descrived on the next page)
+  - *It is recommended for the access from outside of Japan (Described on the next page)
 - Registration with NIFCLOUD ID（Invoice payment) *For Expert plan or higher plan
   - You need to register NIFCLOUD ID first.
   - Register from [Here](https://sso.nifcloud.com/auth/realms/nifcloud/protocol/openid-connect/registrations?client_id=user-registration&response_type=code&redirect_uri=%2Fcomp-registration.html&entry_code=N00000470100)
@@ -33,7 +33,7 @@ Register with one of the following accounts
 ---
 ## Preparation(Access from outside of Japan)
 
-- English serivce site is here
+- English service site is here
 https://mbaas.nifcloud.com/en/
 - Control panel supports "Japanese, English, Chinese (Traditional)"
 - To change the language, please see below:
@@ -55,11 +55,11 @@ This Seminar project is prepared for the following environment
 
 - We will implement functions in 3 steps.
 - Create an App in lecture style by repeating instructions and exercises.
-- Whole progress will be cheked by taking the operation check time and break time.
+- Whole progress will be chekced by taking the operation check time and break time.
 - Q&A time will be held at any time.
 - We have translated the materials as much as possible.
 However, some App screen, control panel and function name are still in Japanese.
-We will supplimentaly explain for those, but we appreciated your understanding in advance.
+We will supplementary explain for those, but we appreciated your understanding in advance.
 
 ---
 ## Hands-on Overview
@@ -70,8 +70,8 @@ We will supplimentaly explain for those, but we appreciated your understanding i
  * After registration to become member, App users can see shop information.
  * App users can register favorite stores and receive push notifications from those stores.
  * Push notifications can be sent selectively by gender or Region.
- * Coupon can be directly deliverd through push notification from the store.
- * Push notifications can be automaticaly sent at a fixed time.
+ * Coupon can be directly delivered through push notification from the store.
+ * Push notifications can be automatically sent at a fixed time.
 
 ---
 ## Hands-on Overview
@@ -113,7 +113,7 @@ These functions to be implemented using the User Management function
 ### Contents：How to Use Filestore Function
 
 Through the creation of "mBaaS Shop List" App, the image displayed by the shop and PR image of the sale information
-to be managed using filestore.
+to be managed using Filestore.
 
 ---
 ## About this Hands-on Seminar
@@ -457,11 +457,11 @@ In this hands-on, we will use "Email Address/Password Authentication" function.
 * Open `SignupActivity.java`.
 * Open `doSignupByEmail()`method. Open the place where the following comment is written.
 ```java
-//**************** 【mBaaS/User①】: Request a Membership Registration emai】***************
+//**************** 【mBaaS/User①】: Request a Membership Registration email】***************
 ```
 * For member registration process, please add the implementation code as follows
 ```java
-//**************** 【mBaaS/User①】: Request a Membership Registration emai】***************
+//**************** 【mBaaS/User①】: Request a Membership Registration email】***************
 String email = _signupEmail.getText().toString();
 NCMBUser.requestAuthenticationMailInBackground(email, new DoneCallback() {
      @Override
@@ -1941,7 +1941,7 @@ if (remoteMessage != null && remoteMessage.getData() != null) {
 ---
 ### Deliver Push Notification：Payload
 ### Push Notification⑦：App Obtains Data from Push Notification</br>
-* We are going to omplement payload processing
+* We are going to implement payload processing
 * Display local push notifications at the specified time.
 
 
@@ -2000,7 +2000,7 @@ Saving device information succeeded.
 ### Operation Check(6)Payload（When the App is activated）
 
 * Create Push Notification
- * If you do not enter any title or message, it will be delievered as a silent push.
+ * If you do not enter any title or message, it will be delivered as a silent push.
  * Paste the created JSON data in "JSON"
 
 ---
@@ -2091,7 +2091,7 @@ Thank you very much for joining us. It would be great if you could tell us about
 
 ・Did this hands-on seminar deepen your understanding of mobile backend? (five step evaluation)
 ・How difficult was this hands-on seminar? (five step evaluation)
-・Whitch features of mobile backend can actually help your actual work. (Multiple Selection)
+・Which features of mobile backend can actually help your actual work. (Multiple Selection)
 　・Reduce the development effort　
 　・Reduce the number of man-hours　
 　・There are plenty of samples.　
@@ -2108,7 +2108,7 @@ Thank you very much for joining us. It would be great if you could tell us about
 　・File store
 　・Script
 
-・Whitch language you usually use. (Multiple Selection)
+・Which language you usually use. (Multiple Selection)
 　・Objective-C
 　・Swift
 　・Java
@@ -2116,7 +2116,7 @@ Thank you very much for joining us. It would be great if you could tell us about
 　・JavaScript
 　・C#
 
-・Please let us know if you need further asistance on mBaaS (free description).
+・Please let us know if you need further assistance on mBaaS (free description).
 
 ・Any other comments
 
