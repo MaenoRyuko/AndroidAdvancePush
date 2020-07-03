@@ -13,7 +13,7 @@ class: center, middle, inverse
 layout: false
 ## Preparation
 If you have not registered an account with NIFCLOUD mobile backend yet<br>
-[Service Site](https://mbaas.nifcloud.com/?utm_source=seminar&utm_medium=refferal&utm_campaign=handson202007)Click the "Free Registration" button in the upper right corner<br>
+[Service Site](https://mbaas.nifcloud.com/?utm_source=seminar&utm_medium=refferal&utm_campaign=handson202007) Click the "Free Registration" button in the upper right corner<br>
 to register your account.
 
 ![mBaaS検索](readme-image/mBaaS無料登録.png)
@@ -31,7 +31,7 @@ Register with one of the following accounts
   - Register from [Here](https://sso.nifcloud.com/auth/realms/nifcloud/protocol/openid-connect/registrations?client_id=user-registration&response_type=code&redirect_uri=%2Fcomp-registration.html&entry_code=N00000470100)
 
 ---
-## Preparation（Access from outside of Japan)
+## Preparation(Access from outside of Japan)
 
 - English serivce site is here
 https://mbaas.nifcloud.com/en/
@@ -95,7 +95,7 @@ We will supplimentaly explain for those, but we appreciated your understanding i
 
 ---
 ## About this Hands-on Seminar
-### Contencts：How to Use Datastore Function
+### Contents：How to Use Datastore Function
 
 Through the creation of "mBaaS Shop List" App, we will register, display and manage
 the data of shop information and user's favorites information using the datastore function.
@@ -103,11 +103,11 @@ These functions to be implemented using the datastore function.
 
 ---
 ## About this Hands-on Seminar
-### Contents：How to Use Member Management Function
+### Contents：How to Use User Management Function
 
 Through the creation of "mBaaS Shop List" App, user login and logout to be implemented, 
 and users linked favorites information to be registered, displayed and managed.
-These functions to be implemented using the member management function
+These functions to be implemented using the User Management function
 ---
 ## About this Hands-on Seminar
 ### Contents：How to Use Filestore Function
@@ -117,7 +117,7 @@ to be managed using filestore.
 
 ---
 ## About this Hands-on Seminar
-### Content: Practice Push Notification①
+### Contents: Practice Push Notification①
 
 Through the creation of "mBaaS Shop List" App, we understand how to build<br>
 effective push notifications that increase active user rate.
@@ -139,7 +139,7 @@ effective push notifications that increases active user rate.<br>
 
 ---
 ## About this Hands-on Seminar
-### Contents：Practice push notification③
+### Contents：Practice Push notification③
 
 Through the creation of "mBaaS Shop List" App, we understand how to build<br>
 effective push notifications that increases active user rate.<br><br>
@@ -152,7 +152,7 @@ effective push notifications that increases active user rate.<br><br>
 ## What is NIFCLOUD mobile backend?
 ### Android SDK Features
 
-* You need to intall SDK
+* You need to install SDK
  * Already implemented this time
  * Reference：[Quick Start](https://mbaas.nifcloud.com/doc/current/introduction/quickstart_android.html)
 * SDK initialization process is required
@@ -189,7 +189,7 @@ obj.save();
 ## What is NIFCLOUD mobile backend?
 ### Android SDK Features
 
-* Processing methods when making requests to the server include__synchronous processing__ and __asynchronous processing__ 
+* Processing methods when making requests to the server include　__synchronous processing__ and __asynchronous processing__ 
 
 ```java
 /* asynchronous processing */
@@ -225,7 +225,7 @@ __<font color="#49a7e5" size="3">Day 1&nbsp;</font><font size="6">Let's create"m
 
 .size_large[
 1. Preparation for Hands-on
-1. Create member management function
+1. Create User Management function
 1. Setting Shop Information
 ]
 
@@ -391,8 +391,8 @@ dependencies {
 ## Preparation for Hands-on
 ### Preparation of mBaaS
 
-* Login to [mBaaS](https://mbaas.nifcloud.com) to create the App 
-* On the App creation screen, enter the App name and click "Create new"
+* Login to [mBaaS](https://console.mbaas.nifcloud.com/) to create the App 
+* On the App creation screen, enter the App name and click "+ New App"
 * If the App is created successfully, the "application key" and "client key" (API key) of the new App will be displayed.
 Make a note of them by copy and paste as we will use them later.
 
@@ -415,7 +415,7 @@ NCMB.initialize(this.getApplicationContext(),"YOUR_APPLICATION_KEY","YOUR_CLIENT
 ### API key setting and SDK initialization
 
 * Please replace the "`YOUR_APPLICATION_KEY`" and "`YOUR_CLIENT_KEY`" parts of the initialization process to the API key issued when the App was created.
- * If you haven't made a note before, you can find API keys again from the mBaaS management screen in "Application Settings" → "Basics"
+ * If you haven't made a note before, you can find API keys again from the mBaaS management screen in "App Settings" → "Basic"
 
 .center[
 ![mBaaSアプリキー設定](readme-image/apikey.png)
@@ -425,16 +425,16 @@ NCMB.initialize(this.getApplicationContext(),"YOUR_APPLICATION_KEY","YOUR_CLIENT
 layout: true
 class: center, middle, inverse
 ---
-# 2.Create member management function
+# 2.Create User Management function
 
 ---
 layout: false
-## Create member management function
+## Create User Management function
 ### mBaaS settings
 
-* mBaaS has "user name/password authentication" and "email address/password authentication" as member management function.
-In this hands-on, we will use "email address/password authentication" function.
-* Allow "email address/password authentication" in member management settings.
+* mBaaS has "ID/Password Authentication" and "Email Address/Password Authentication" as User Management function.
+In this hands-on, we will use "Email Address/Password Authentication" function.
+* Allow "Email Address/Password Authentication" in User Management settings.
 
 .center[
 ![mBaaS会員設定](readme-image/mBaaS会員設定.png)
@@ -442,17 +442,17 @@ In this hands-on, we will use "email address/password authentication" function.
 
 
 ---
-## Create Member Management Function
+## Create User Management Function
 
-### Member Management①：Request a Membership Registration email
+### User Management①：Request a Membership Registration email
 
 .center[
 ![SignUpViewController](readme-image/SignUpViewController.png)
 ]
 
 ---
-## Create member management function
-### Member management①：Request a membership registration email
+## Create User Management function
+### User Management①：Request a membership registration email
 
 * Open `SignupActivity.java`.
 * Open `doSignupByEmail()`method. Open the place where the following comment is written.
@@ -476,8 +476,8 @@ NCMBUser.requestAuthenticationMailInBackground(email, new DoneCallback() {
 ```
 
 ---
-## Create member management function
-### Member management①：Request a membership registration email[Already implemented]
+## Create User Management function
+### User Management①：Request a membership registration email[Already implemented]
 
 * Please add each processing
 
@@ -505,16 +505,16 @@ new AlertDialog.Builder(SignupActivity.this)
         .show();
 ```
 ---
-## Create Member Management Function
-### Member management②：Login with email address and password
+## Create User Management Function
+### User Management②：Login with email address and password
 
 .center[
 ![LoginViewController](readme-image/LoginViewController.png)
 ]
 
 ---
-## Create Member Management Function
-### Member management②：Login with email address and password
+## Create User Management Function
+### User Management②：Login with email address and password
 * Open `LoginActivity.java`.
 * Open `doLogin()` method. Open the following comment.
 
@@ -523,8 +523,8 @@ new AlertDialog.Builder(SignupActivity.this)
 ```
 
 ---
-## Create Member Management Function
-### Member management②：Login with email address and password
+## Create User Management Function
+### User Management②：Login with email address and password
 
 * Please add the login process as follows.
 
@@ -546,8 +546,8 @@ NCMBUser.loginWithMailAddressInBackground(email, password, new LoginCallback() {
 ```
 
 ---
-## Create Member Management Function
-### Member management②：Login with email address and password
+## Create User Management Function
+### User Management②：Login with email address and password
 
 * Please add each processing
 
@@ -561,7 +561,7 @@ new AlertDialog.Builder(LoginActivity.this)
 ```
 
 ---
-### Member management②：Login with email address and password
+### User Management②：Login with email address and password
 
 * Please add each processing (continued)
 
@@ -592,7 +592,7 @@ AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
 ```
 
 ---
-## Create Member Management Function
+## Create User Management Function
 ### Operation check(1)Let's log in
 
 * Build on the simulator/actual device and check the operation.
@@ -603,7 +603,7 @@ AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
  [Error code list](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)
 
 ---
-## Create Member Management Function
+## Create User Management Function
 ### Operation check(1)Let's log in
 
 .center[
@@ -611,7 +611,7 @@ AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
 ]
 
 ---
-## Create Member Management Function
+## Create User Management Function
 ### Operation check(1)Let's log in
 
 * You will receive a member registration email, then set a password
@@ -621,13 +621,13 @@ AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
 ]
 
 ---
-## Create Member Management Function
+## Create User Management Function
 ### Operation check(1)Let's log in
 
 * Return to the login screen again, and log in with your "email address" and "password". Make sure that you can log in successfully.
  * Please check the log.
 * In addition, check the registered user information on the mBaaS management screen.
- * Select "Member Management" at the the administration screen, and then select "All Members".
+ * Select "User Management" at the the administration screen, and then select "All Users".
  * Users are registered in user list
 
 .center[
@@ -638,7 +638,7 @@ AlertDialog show = new AlertDialog.Builder(LoginActivity.this)
 ]
 
 ---
-## Create Member Management Function
+## Create User Management Function
 ### About Code(1)Let's Log in!
 
 * In order to request an email for membership registration, we make an API request using the following method provided by the Android SDK.
@@ -648,7 +648,7 @@ NCMBUser.requestAuthenticationMailInBackground(email, DoneCallback());
 * A default membership registration email format will be sent. (This time email is in Japanese, but the mail format and domain can be customized.)
 
 ---
-## Create Member Management Function
+## Create User Management Function
 ### About Code(1)Let's Log in!
 
 * Once the membership registration is completed, we do log in it. To perform the login, Android SDK requests API to log in
@@ -660,8 +660,8 @@ NCMBUser.loginWithMailAddressInBackground(email, password, new LoginCallback());
 When the result is returned from the server side, the pattern processing which is a normal/error judgment of NCMBException is performed in LoginCallback ().
 
 ---
-## Create Member Management Function
-### Member Management③：Update User Information
+## Create User Management Function
+### User Management③：Update User Information
 
 * When you log in for the first time, a screen for registering user attributes will appear. we are now going to proceed the user information registration process.
 .center[
@@ -669,8 +669,8 @@ When the result is returned from the server side, the pattern processing which i
 ]
 
 ---
-## Create Member Management Function
-### Member Management③：Update User Information
+## Create User Management Function
+### User Management③：Update User Information
 
 
 * Open `RegisterActivity.java`
@@ -687,8 +687,8 @@ When the result is returned from the server side, the pattern processing which i
 * Please be careful as it is very far down.
 
 ---
-## Create Member Management Function
-### Member Management③：Update User Information
+## Create User Management Function
+### User Management③：Update User Information
 
 * Here is the code we are going to add
 
@@ -715,8 +715,8 @@ common.currentUser.saveInBackground(new DoneCallback() {
 ```
 
 ---
-## Create Member Management Function
-### Member Management③：Update User Information
+## Create User Management Function
+### User Management③：Update User Information
 
 * Add processing for each.
 
@@ -744,8 +744,8 @@ new AlertDialog.Builder(RegisterActivity.this)
 ```
 
 ---
-## Create Member Management Function
-### Member Management③：Update User Information
+## Create User Management Function
+### User Management③：Update User Information
 
 * Implementation of the Update User Information is now done.
 * Once we implemente the next step "Setting Shop Information", let's do operation check together.
@@ -1082,7 +1082,7 @@ layout: false
 
 ---
 ## Create Favorites Function
-### Member management④：Update User Information
+### User Management④：Update User Information
 
 * Implements a favorites function so that logged-in users to register favorites on the "Favorites" screen.
 * Open `FavoriteActivity.java`
@@ -1098,7 +1098,7 @@ layout: false
 
 ---
 ### Create Favorites Function
-### Member management④：Update User Information
+### User Management④：Update User Information
 
 * Here is the code we are going to add
 
@@ -1123,7 +1123,7 @@ common.currentUser.saveInBackground(new DoneCallback() {
 
 ---
 ### Create Favorites Function
-### Member management④：Update User Information
+### User Management④：Update User Information
 
 * Here are the processing codes to add for each.
 
@@ -1153,7 +1153,7 @@ new AlertDialog.Builder(FavoriteActivity.this)
 ---
 ## Create Favorites Function
 
-### Member management⑤：Update User Information
+### User Management⑤：Update User Information
 
 * We are now going to implement the processing of the Shop screen.
 * Open `ShopActivity.java`
@@ -1170,7 +1170,7 @@ new AlertDialog.Builder(FavoriteActivity.this)
 ---
 ## Create Favorites Function
 
-### Member management⑤：Update User Information
+### User Management⑤：Update User Information
 * The code to add is followings.
 ```java
 //**************** 【mBaaS/User⑤: update member information】***************
@@ -1195,7 +1195,7 @@ common.currentUser.saveInBackground(new DoneCallback() {
 ---
 ## Create Favorites Function
 
-### Member management⑤：Update User Information
+### User Management⑤：Update User Information
 
 * Here are the processing codes to add for each.
 
@@ -1249,7 +1249,7 @@ new AlertDialog.Builder(ShopActivity.this)
 
 * The registration of favorites is basically the favorites data added to the information of registered users,
 and stored as an array of IDs (objectId) of selected stores.
-* Please check the data registered in the member management on administration screen of mBaaS.
+* Please check the data registered in the User Management on administration screen of mBaaS.
 .center[
 ![コード解説③](readme-image/favoriteDataInUserData.png)
 ]
@@ -1443,9 +1443,9 @@ NCMB.initialize(this.getApplicationContext(),"APP_KEY","CLIENT_KEY");
 * Open "Push Notification" on mBaaS administration screen, and click "+ New Push Notification".
 * On the Push Notification setting screen:
  * Enter message and title as you want
- * Leave [Deliver Now] as it is.
+ * Leave [Deliver Immedediately] as it is.
  * Check [Deliver to Android device].
- * Click [Create push notifications] , and deliver
+ * Click [New push notifications] , and deliver
 
 ---
 ## Preparation for Push Notification
@@ -1609,8 +1609,8 @@ currInstallation.saveInBackground(new DoneCallback() {
 ## Deliver Push Notification：Segment Delivery
 ### Preparation for Operation Check
 
-* In order to display the member information registration screen again, click "Editing a Class" on the member management screen of mBaaS.
-* Check "nickname" and use the "Deletion" button above to delete.
+* In order to display the member information registration screen again, click "Edit Class" on the User Management screen of mBaaS.
+* Check "nickname" and use the "Delete" button above to delete.
 
 .center[
 ![動作確認④セグメント0](readme-image/動作確認④セグメント0.png)
@@ -1673,7 +1673,7 @@ Let's deliver push notifications by narrowing users who have has registered __sh
 * Enter a message
  * i.e.：ShopB Now on sale!
 * Check "Deliver to Android device".
-* Set "distribution device"
+* Set "Target Devices"
 
 .center[
 ![動作確認④セグメント1](readme-image/動作確認④セグメント1.png)
@@ -1683,7 +1683,7 @@ Let's deliver push notifications by narrowing users who have has registered __sh
 ## Deliver Push Notification：Segment Delivery
 ### Operation Check(4)Segment Delivery
 
-* Select "Narrowing down from the installation class"
+* Select "Search devices in Installation Class"
 * Narrow down setting
  * Paste the copied ShopB objectId here
 
@@ -1695,8 +1695,8 @@ Let's deliver push notifications by narrowing users who have has registered __sh
 ## Deliver Push Notification：Segment Delivery
 ### Operation Check(4)Segment Delivery
 
-* It is OK if "Sent to one device" is displayed.
-* Click "Create push notifications"
+* It is OK if "1 Send to devices" is displayed.
+* Click "New push notification"
 * It will be delivered after waiting for a while → Check the device!
 
 .center[
@@ -1754,7 +1754,7 @@ layout: false
 ## Deliver Push Notification：Rich Push
 ### Public File Settings
 
-* Validate public filesSettings "Retrieving over HTTP" on the mBaaS administration screen.
+* Validate public filesSettings "Access by public URL (HTTPS)" on the mBaaS administration screen.
 
 .center[
 ![mBaaS公開ファイル設定](readme-image/mBaaS公開ファイル設定.png)
@@ -2073,7 +2073,7 @@ layout: false
 ### What we have learned
 
 * How to create an App using each function of mBaaS
- * Member management
+ * User Management
  * Datastore
  * Filestore
  * Push notification
@@ -2103,7 +2103,7 @@ Thank you very much for joining us. It would be great if you could tell us about
 
 ・Which function you are interested in among mobile backend. (Multiple Selection)
 　・Push notification
-　・Member management
+　・User Management
 　・Data store
 　・File store
 　・Script
