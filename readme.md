@@ -13,7 +13,7 @@ class: center, middle, inverse
 layout: false
 ## Preparation
 If you have not registered an account with NIFCLOUD mobile backend yet<br>
-[Service Site](https://mbaas.nifcloud.com/?utm_source=seminar&utm_medium=refferal&utm_campaign=handson202007) Click the "Free Registration" button in the upper right corner<br>
+[Service Site](https://mbaas.nifcloud.com/en/) Click the "Free Registration" button in the upper right corner<br>
 to register your account.
 
 ![mBaaS検索](readme-image/mBaaS無料登録.png)
