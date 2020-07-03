@@ -16,8 +16,6 @@ If you have not registered an account with NIFCLOUD mobile backend yet<br>
 [Service Site](https://mbaas.nifcloud.com/?utm_source=seminar&utm_medium=refferal&utm_campaign=handson202007)Click the "Free Registration" button in the upper right corner<br>
 to register your account.
 
-![mBaaS検索](readme-image/mBaaS検索.png)
-
 ![mBaaS検索](readme-image/mBaaS無料登録.png)
 
 
@@ -68,7 +66,7 @@ We will supplimentaly explain for those, but we appreciated your understanding i
 ### About the App to create
 
 * Understand the function of mBaaS by creating a App "mBaaS Shop List" a kind of coupon delivery App.
-*Code the mBaaS integration to complete the App, and realize:
+* Code the mBaaS integration to complete the App, and realize:
  * After registration to become member, App users can see shop information.
  * App users can register favorite stores and receive push notifications from those stores.
  * Push notifications can be sent selectively by gender or Region.
